@@ -3,6 +3,8 @@
 Declarative gulp tasks composition and watching causality.
 Better with [beverage](https://github.com/orlin/beverage).
 
+To be developed further, with documentation coming soon...
+
 ## Dependencies
 
 [![Dependency Status](https://david-dm.org/orlin/gulp-cause.svg)](https://david-dm.org/orlin/gulp-cause)
