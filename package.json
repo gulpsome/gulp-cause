@@ -1,0 +1,40 @@
+{
+  "name": "gulp-cause",
+  "description": "declarative gulp tasks causality",
+  "keywords": [
+    "gulp",
+    "beverage",
+    "declarative",
+    "tasks",
+    "watch",
+    "json",
+    "data",
+    "format"
+  ],
+  "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/orlin/gulp-cause.git"
+  },
+  "author": "Orlin M Bozhinov <om@soundsapiens.com>",
+  "main": "index.es5.js",
+  "dependencies": {
+    "ramda": "^0.15.0",
+    "source-map-support": "^0.3.1",
+    "stamina": "0.0.3"
+  },
+  "devDependencies": {
+    "babel": "^5.5.8",
+    "babel-eslint": "^3.1.17",
+    "beverage": "0.0.3",
+    "eslint": "^0.23.0",
+    "eslint-config-standard": "^3.3.0",
+    "gulp": "^3.9.0"
+  },
+  "scripts": {
+    "build": "node_modules/.bin/babel index.js -o index.es5.js --source-maps inline --loose es6.modules",
+    "build:watch": "npm run build -- -w",
+    "test": "node_modules/.bin/beverage -h -o"
+  },
+  "license": "MIT"
+}
