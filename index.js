@@ -3,8 +3,11 @@ require('source-map-support').install()
 import R from 'ramda'
 import {gulpTask} from 'stamina'
 
-export default function (gulp, causality) {
+export function load (what) {
+  return new Map(what)
+}
 
+export default function (gulp, causality) {
   for (let task in causality) {
     let cause = causality[task]
     switch (R.type(cause)) {
@@ -25,6 +28,5 @@ export default function (gulp, causality) {
         console.warn(`Causeless ${task}: ${cause.toString()}`)
     }
   }
-
   return gulp
 }
