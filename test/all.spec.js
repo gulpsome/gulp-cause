@@ -31,4 +31,19 @@ describe('load', () => {
     })
   })
 
+  describe('an empty Array', () => {
+    it('makes an empty Map', () => {
+      expect(load([])).to.eql(new Map())
+    })
+  })
+
+  describe('it throws when given', () => {
+    it('an Array of length 1, a special case', () => {
+      expect(() => load([1])).to.throw(Error)
+    })
+    it('an Array of length 3, odd = bad data', () => {
+      expect(() => load([1, 2, 3])).to.throw(Error)
+    })
+  })
+
 })
