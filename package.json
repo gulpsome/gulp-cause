@@ -17,9 +17,8 @@
     "url": "git://github.com/orlin/gulp-cause.git"
   },
   "author": "Orlin M Bozhinov <om@soundsapiens.com>",
-  "main": "index.es5.js",
+  "main": "es5/index.js",
   "dependencies": {
-    "es6-module-loader": "^0.17.2",
     "ramda": "^0.15.0",
     "source-map-support": "^0.3.1",
     "stamina": "0.0.3"
@@ -35,8 +34,9 @@
     "mocha": "^2.2.5"
   },
   "scripts": {
-    "build": "node_modules/.bin/babel index.js -o index.es5.js --source-maps inline",
-    "build:watch": "npm run build -- -w",
+    "build": "node_modules/.bin/babel -d es5 --source-maps inline",
+    "build:all": "npm run build -- index.js load.js",
+    "build:watch": "npm run build:all -- -w",
     "test": "./node_modules/.bin/mocha"
   },
   "license": "MIT"

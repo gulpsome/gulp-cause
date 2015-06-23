@@ -1,10 +1,10 @@
 {
   "scripts": {
     "include": {
-      "build": "index.es5.js"
+      "build": "lib/index.js"
     }
   },
   "testWatch": ["load.js", "test/*.spec.js"],
-  "causality": {"build": ["index.js"]},
+  "causality": {"build": ["index.js", "load.js"]},
   "sourcegate": [{"recipe": "eslint", "sources": {"extends": ["standard"]}}]
 }
