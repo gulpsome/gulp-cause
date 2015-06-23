@@ -1,6 +1,6 @@
 /* global expect */
 
-import {load} from '../index.js'
+import load from '../load.js'
 
 describe('load', () => {
   let anObject = {one: 1, two: 2}
