@@ -3,7 +3,8 @@
 import load from '../load.js'
 
 describe('load', () => {
-  let anObject = {one: 1, two: 2}
+  let anObject = {'one': 1, 'two': 2}
+  let eqlArray = ['one', 1, 'two', 2]
   let expected = new Map([['one', 1], ['two', 2]])
 
   describe('a Map is returned as is', () => {
@@ -15,6 +16,12 @@ describe('load', () => {
   describe('given a plain js Object', () => {
     it('makes a Map', () => {
       expect(load(anObject)).to.eql(expected)
+    })
+  })
+
+  describe('an Array of even length', () => {
+    it('makes a Map', () => {
+      expect(load(eqlArray)).to.eql(expected)
     })
   })
 
