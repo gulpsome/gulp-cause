@@ -2,11 +2,10 @@ require('source-map-support').install()
 
 import R from 'ramda'
 import {gulpTask} from 'stamina'
+import load from './load.js'
 
 export default function (gulp, causality) {
-
-  for (let task in causality) {
-    let cause = causality[task]
+  for (let [task, cause] of load(causality)) {
     switch (R.type(cause)) {
       case 'String':
         if (gulp.tasks[cause]) {
@@ -25,6 +24,5 @@ export default function (gulp, causality) {
         console.warn(`Causeless ${task}: ${cause.toString()}`)
     }
   }
-
   return gulp
 }

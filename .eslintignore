@@ -3,3 +3,5 @@
 
 # except:
 !index.js
+!load.js
+!test/**/*.js
