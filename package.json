@@ -19,6 +19,7 @@
   "author": "Orlin M Bozhinov <om@soundsapiens.com>",
   "main": "index.es5.js",
   "dependencies": {
+    "es6-module-loader": "^0.17.2",
     "ramda": "^0.15.0",
     "source-map-support": "^0.3.1",
     "stamina": "0.0.3"
@@ -34,7 +35,7 @@
     "mocha": "^2.2.5"
   },
   "scripts": {
-    "build": "node_modules/.bin/babel index.js -o index.es5.js --source-maps inline --loose es6.modules",
+    "build": "node_modules/.bin/babel index.js -o index.es5.js --source-maps inline",
     "build:watch": "npm run build -- -w",
     "test": "./node_modules/.bin/mocha"
   },

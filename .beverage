@@ -4,7 +4,7 @@
       "build": "index.es5.js"
     }
   },
-  "test": {},
+  "testWatch": ["load.js", "test/*.spec.js"],
   "causality": {"build": ["index.js"]},
   "sourcegate": [{"recipe": "eslint", "sources": {"extends": ["standard"]}}]
 }

@@ -1,3 +1,5 @@
+import R from 'ramda'
+
 export default function load (what) {
   switch (R.type(what)) {
     case 'Map':
