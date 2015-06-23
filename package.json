@@ -34,9 +34,9 @@
     "mocha": "^2.2.5"
   },
   "scripts": {
-    "build": "node_modules/.bin/babel -d es5 --source-maps inline",
-    "build:all": "npm run build -- index.js load.js",
-    "build:watch": "npm run build:all -- -w",
+    "build:what": "node_modules/.bin/babel -d es5 --source-maps inline",
+    "build": "npm run build:what -- index.js load.js",
+    "build:watch": "npm run build -- -w",
     "test": "./node_modules/.bin/mocha"
   },
   "license": "MIT"
