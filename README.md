@@ -7,10 +7,10 @@ Better with [beverage](https://github.com/orlin/beverage).
 
 [![NPM](https://nodei.co/npm/gulp-cause.png?mini=true)](https://www.npmjs.org/package/gulp-cause)
 
-### Vaporware
+### Work in Progress
 
-Note that none of this is implemented yet.
-The documentation below only defines what the api would probably soon be like.
+Some of the functionality described below isn't implemented yet.
+See the trailing comments in the example about which parts that is.
 
 Here is an example of how this would work:
 
@@ -19,9 +19,9 @@ var gulp = require('gulp');
 // create task, two, three, more
 require('gulp-cause')(gulp, [
   'alias', 'task',
-  'both', {tasks: ['two', 'three']},
-  'task', ['src/*'], // shorthand
-  'cool', {tasks: ['more'], watch: ['place/*']}
+  'both', {tasks: ['two', 'three']}, // not implemented yet
+  'task', ['src/*'], // shorthand, works fine in most cases (where watch is needed)
+  'cool', {tasks: ['more'], watch: ['place/*']} // not implemented yet
 ]);
 ```
 
@@ -35,6 +35,12 @@ The code above instructs `gulp-cause` to:
 ### Rationale
 
 There must be an even number of causality pairs in the array.  Having two items per line is good for readability.  The left one is always a task name to either be created or invoked - depending on the right-hand-side.  The data is processed one pair of items at a time, thus with each step one can depend on tasks from the previous steps.  If no tasks existed to begin with, then `gulp-cause` couldn't do a thing.
+
+## Test [![Build Status](https://img.shields.io/travis/orlin/gulp-cause.svg?style=flat)](https://travis-ci.org/orlin/gulp-cause)
+
+```sh
+npm test
+```
 
 ## Dependencies
 
