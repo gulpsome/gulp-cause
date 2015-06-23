@@ -4,7 +4,8 @@ import R from 'ramda'
 import {gulpTask} from 'stamina'
 
 export function load (what) {
-  return new Map(what)
+  if (R.type(what) === 'Map') return what
+  else return new Map(what)
 }
 
 export default function (gulp, causality) {
