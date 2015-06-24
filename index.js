@@ -3,9 +3,10 @@ require('source-map-support').install()
 import R from 'ramda'
 import {gulpTask} from 'stamina'
 import load from './load.js'
+import {inspect} from 'util'
 
 function causeless (task, cause, because) {
-  throw new Error(`Causeless ${task}: ${cause.toString()} due to ${because}`)
+  throw new Error(`Causeless {${task}: ${inspect(cause)}} due to ${because}.`)
 }
 
 export default function (gulp, causality) {
