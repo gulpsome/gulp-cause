@@ -4,12 +4,18 @@ import R from 'ramda'
 import {gulpTask} from 'stamina'
 import load from './load.js'
 
+function causeless (task, cause, because) {
+  throw new Error(`Causeless ${task}: ${cause.toString()} due to ${because}`)
+}
+
 export default function (gulp, causality) {
   for (let [task, cause] of load(causality)) {
     switch (R.type(cause)) {
       case 'String':
         if (gulp.tasks[cause]) {
           gulpTask(gulp, task, `Alias for '${cause}'.`, [cause])
+        } else {
+          causeless(task, cause, `missing task ${cause} - can't alias`)
         }
         break
       case 'Array':
@@ -21,7 +27,7 @@ export default function (gulp, causality) {
         }
         break
       default:
-        console.warn(`Causeless ${task}: ${cause.toString()}`)
+        causeless(task, cause, 'unrecognized value type')
     }
   }
   return gulp
