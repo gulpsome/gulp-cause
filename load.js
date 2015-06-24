@@ -14,7 +14,7 @@ function atom (a) {
   let m = new Map()
   if (evenLength(a) && a.length >= 2) {
     for (let i = 0; i < a.length; i = i + 2) {
-      m.set(i, i + 1)
+      m.set(a[i], a[i + 1])
     }
   }
   return m

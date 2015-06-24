@@ -1,10 +1,11 @@
 {
   "scripts": {
     "include": {
-      "build": "lib/index.js"
-    }
+      "build": "All to es5/."
+    },
+    "exclude": ["build:what"]
   },
   "testWatch": ["load.js", "test/*.spec.js"],
-  "causality": {"build": ["index.js", "load.js"]},
+  "causality": ["build", ["index.js", "load.js"]],
   "sourcegate": [{"recipe": "eslint", "sources": {"extends": ["standard"]}}]
 }
