@@ -4,6 +4,7 @@ import R from 'ramda'
 import {gulpTask} from 'stamina'
 import load from './load.js'
 import {inspect} from 'util'
+import watch from 'gulp-watch'
 
 function causeless (task, cause, because) {
   throw new Error(`Causeless {${task}: ${inspect(cause)}} due to ${because}.`)
@@ -23,7 +24,7 @@ export default function (gulp, causality) {
         if (gulp.tasks[task]) {
           // a shorthand for files triggering an existing task - creates task:watch
           gulpTask(gulp, `${task}:watch`, cause.toString(), () =>
-            gulp.watch(cause, [task])
+            watch(cause, [task])
           )
         }
         break
