@@ -36,6 +36,10 @@ The code above instructs `gulp-cause` to:
 
 There must be an even number of causality pairs in the array.  Having two items per line is good for readability.  The left one is always a task name to either be created or invoked - depending on the right-hand-side.  The data is processed one pair of items at a time, thus with each step one can depend on tasks from the previous steps.  If no tasks existed to begin with, then `gulp-cause` couldn't do a thing.
 
+### Watch
+
+Watching is done with [gulp-watch](https://github.com/floatdrop/gulp-watch) rather than `gulp.watch`.  This may matter if a task handles its events in some custom way.
+
 ## Test [![Build Status](https://img.shields.io/travis/orlin/gulp-cause.svg?style=flat)](https://travis-ci.org/orlin/gulp-cause)
 
 ```sh
