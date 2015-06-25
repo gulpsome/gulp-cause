@@ -1,5 +1,6 @@
 --compilers js:babel/register
 --require test/common
+--timeout 7000
 --reporter tap
 --ui bdd
 --colors
