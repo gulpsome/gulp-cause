@@ -23,9 +23,12 @@ export default function (gulp, causality) {
       case 'Array':
         if (gulp.tasks[task]) {
           // a shorthand for files triggering an existing task - creates task:watch
-          gulpTask(gulp, `${task}:watch`, cause.toString(), () =>
-            watch(cause, [task])
-          )
+          let plainWatch = (R.type(cause[0]) !== 'Array')
+          let helpString = plainWatch ? cause.toString() : cause[0].toString()
+          gulpTask(gulp, `${task}:watch`, helpString, () => {
+            if (plainWatch) gulp.watch(cause, [task])
+            else watch(...cause) // want gulp-watch (applying cause args)
+          })
         }
         break
       default:
