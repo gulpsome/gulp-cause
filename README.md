@@ -21,6 +21,7 @@ require('gulp-cause')(gulp, [
   'alias', 'task',
   'both', {tasks: ['two', 'three']}, // not implemented yet
   'task', ['src/*'], // shorthand, works fine in most cases (where watch is needed)
+  'two', [['src/*'], fn], // this array is gulp-watch args
   'cool', {tasks: ['more'], watch: ['place/*']} // not implemented yet
 ]);
 ```
@@ -30,7 +31,8 @@ The code above instructs `gulp-cause` to:
 1. make `alias` of an existing `task`
 2. create task `both` to run tasks `two` and `three` in parallel
 3. `task:watch` will be created - any `src/*` changes will cause `task` to be run
-4. task `cool` watches `place/*` files and can have any name, not just `more:watch`
+4. `two:watch` uses `gulp-watch` rather than `gulp.watch` - documented further down
+5. task `cool` watches `place/*` files and can have any name, not just `more:watch`
 
 ### Rationale
 
@@ -38,7 +40,8 @@ There must be an even number of causality pairs in the array.  Having two items 
 
 ### Watch
 
-Watching is done with [gulp-watch](https://github.com/floatdrop/gulp-watch) rather than `gulp.watch`.  This may matter if a task handles its events in some custom way.
+Using `gulp.watch` by default, unless the watch value is more complex than an array of globs to watch.  In such a case, `gulp-cause` will interpret the array as a [gulp-watch](https://github.com/floatdrop/gulp-watch) arguments list to be applied.  See [gulp-npm-test](https://github.com/orlin/gulp-npm-test/tree/master) for example.
+Which of the two is preferable depends on the use case.
 
 ## Test [![Build Status](https://img.shields.io/travis/orlin/gulp-cause.svg?style=flat)](https://travis-ci.org/orlin/gulp-cause)
 
