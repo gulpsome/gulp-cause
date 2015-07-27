@@ -19,10 +19,10 @@
   "author": "Orlin M Bozhinov <om@soundsapiens.com>",
   "main": "es5/index.js",
   "dependencies": {
+    "be-goods": "0.0.1",
     "gulp-watch": "^4.2.4",
     "ramda": "^0.15.0",
-    "source-map-support": "^0.3.1",
-    "stamina": "0.0.3"
+    "source-map-support": "^0.3.1"
   },
   "devDependencies": {
     "babel": "^5.5.8",
