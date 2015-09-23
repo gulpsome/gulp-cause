@@ -1,4 +1,4 @@
-require('source-map-support').install()
+import 'source-map-support/register'
 
 import R from 'ramda'
 import {gulpTask} from 'be-goods'

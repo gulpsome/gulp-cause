@@ -19,7 +19,8 @@ var gulp = require('gulp');
 // create task, two, three, more
 require('gulp-cause')(gulp, [
   'alias', 'task',
-  'both', {tasks: ['two', 'three']}, // not implemented yet
+  'both', {parallel: ['two', 'three']}, // not implemented yet
+  'sequence', {series: ['both', 'more']}, // not implemented yet
   'task', ['src/*'], // shorthand, works fine in most cases (where watch is needed)
   'two', [['src/*'], fn], // this array is gulp-watch args
   'cool', {tasks: ['more'], watch: ['place/*']} // not implemented yet
@@ -30,9 +31,10 @@ The code above instructs `gulp-cause` to:
 
 1. make `alias` of an existing `task`
 2. create task `both` to run tasks `two` and `three` in parallel
-3. `task:watch` will be created - any `src/*` changes will cause `task` to be run
-4. `two:watch` uses `gulp-watch` rather than `gulp.watch` - documented further down
-5. task `cool` watches `place/*` files and can have any name, not just `more:watch`
+3. create task `sequence` to first run task `both` (declared above), then task `more`
+4. `task:watch` will be created - any `src/*` changes will cause `task` to be run
+5. `two:watch` uses `gulp-watch` rather than `gulp.watch` - documented further down
+6. task `cool` watches `place/*` files and can have any name, not just `more:watch`
 
 ### Rationale
 
