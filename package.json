@@ -14,7 +14,7 @@
   "version": "0.0.5-1",
   "repository": {
     "type": "git",
-    "url": "git://github.com/orlin/gulp-cause.git"
+    "url": "git@github.com:gulpsome/gulp-cause.git"
   },
   "author": "Orlin M Bozhinov <om@soundsapiens.com>",
   "main": "es5/index.js",
