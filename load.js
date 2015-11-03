@@ -1,8 +1,7 @@
 import R from 'ramda'
 
 function dataError (what) {
-  throw new Error(`Don't know how to convert \
-'${what}' of type ${R.type(what)} to a Map.`)
+  throw new Error(`Don't know how to convert '${what}' of type ${R.type(what)} to a Map.`)
 }
 
 function evenLength (a) {
@@ -21,6 +20,7 @@ function atom (a) {
 }
 
 export default function load (what) {
+  // module.exports = function load (what) {
   switch (R.type(what)) {
     case 'Map':
       return what
