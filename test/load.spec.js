@@ -1,5 +1,7 @@
 /* global assert expect inspect */
 
+require('map.prototype.tojson')
+
 // stands for assert.equal because es6 maps are funky
 function ae (actual, expected) {
   assert.deepEqual(actual.toJSON(), expected.toJSON(), `\
