@@ -20,7 +20,6 @@ function atom (a) {
 }
 
 export default function load (what) {
-  // module.exports = function load (what) {
   switch (R.type(what)) {
     case 'Map':
       return what
