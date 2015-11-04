@@ -1,9 +1,10 @@
 /* global assert expect inspect */
 
-require('map.prototype.tojson')
+require('map.prototype.tojson') // this used to be in babel v5
 
 // stands for assert.equal because es6 maps are funky
 function ae (actual, expected) {
+  // NOTE: it seems the official syntax is JSON.stringify(aMap)
   assert.deepEqual(actual.toJSON(), expected.toJSON(), `\
 actual value ${inspect(actual)} != \
 the expected ${inspect(expected)}`)
