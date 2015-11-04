@@ -40,7 +40,7 @@
     "mocha": "^2.3.3"
   },
   "scripts": {
-    "build:what": "node_modules/.bin/babel -d es5 --loose es6.modules --source-maps inline",
+    "build:what": "node_modules/.bin/babel -d es5 --source-maps inline",
     "build": "npm run build:what -- index.js load.js",
     "build:watch": "npm run build -- -w",
     "test": "./node_modules/.bin/mocha"
