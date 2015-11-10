@@ -45,7 +45,7 @@ There must be an even number of causality pairs in the array.  Having two items 
 Using `gulp.watch` by default, unless the watch value is more complex than an array of globs to watch.  In such a case, `gulp-cause` will interpret the array as a [gulp-watch](https://github.com/floatdrop/gulp-watch) arguments list to be applied.  See [gulp-npm-test](https://github.com/gulpsome/gulp-npm-test/tree/master) for example.
 Which of the two is preferable depends on the use case.
 
-## Test [![Build Status](https://img.shields.io/travis/orlin/gulp-cause.svg?style=flat)](https://travis-ci.org/orlin/gulp-cause)
+## Test [![Build Status](https://img.shields.io/travis/gulpsome/gulp-cause.svg?style=flat)](https://travis-ci.org/gulpsome/gulp-cause)
 
 ```sh
 npm test
