@@ -51,10 +51,9 @@ Which of the two is preferable depends on the use case.
 npm test
 ```
 
-## Dependencies
+## Develop [![Dependency Status](https://david-dm.org/gulpsome/gulp-cause.svg)](https://david-dm.org/gulpsome/gulp-cause) [![devDependency Status](https://david-dm.org/gulpsome/gulp-cause/dev-status.svg)](https://david-dm.org/gulpsome/gulp-cause#info=devDependencies)
 
-[![Dependency Status](https://david-dm.org/gulpsome/gulp-cause.svg)](https://david-dm.org/gulpsome/gulp-cause)
-[![devDependency Status](https://david-dm.org/gulpsome/gulp-cause/dev-status.svg)](https://david-dm.org/gulpsome/gulp-cause#info=devDependencies)
+[![js-standard-style](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/feross/standard)
 
 ## License
 
