@@ -1,4 +1,4 @@
-require('source-map-support').install()
+import 'source-map-support/register'
 
 import R from 'ramda'
 import {gulpTask} from 'be-goods'
@@ -10,7 +10,7 @@ function causeless (task, cause, because) {
   throw new Error(`Causeless {${task}: ${inspect(cause)}} due to ${because}.`)
 }
 
-export default function (gulp, causality) {
+module.exports = function (gulp, causality) {
   for (let [task, cause] of load(causality)) {
     switch (R.type(cause)) {
       case 'String':

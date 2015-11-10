@@ -1,8 +1,7 @@
 import R from 'ramda'
 
 function dataError (what) {
-  throw new Error(`Don't know how to convert \
-'${what}' of type ${R.type(what)} to a Map.`)
+  throw new Error(`Don't know how to convert '${what}' of type ${R.type(what)} to a Map.`)
 }
 
 function evenLength (a) {
