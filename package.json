@@ -11,7 +11,7 @@
     "data",
     "format"
   ],
-  "version": "0.0.5-1",
+  "version": "0.0.6",
   "repository": {
     "type": "git",
     "url": "git@github.com:gulpsome/gulp-cause.git"
@@ -19,7 +19,7 @@
   "author": "Orlin M Bozhinov <om@soundsapiens.com>",
   "main": "es5/index.js",
   "dependencies": {
-    "be-goods": "0.0.3-1",
+    "be-goods": "0.0.4",
     "gulp-watch": "^4.3.5",
     "ramda": "^0.18.0",
     "source-map-support": "^0.3.3"
