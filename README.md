@@ -1,5 +1,10 @@
 # gulp-cause
 
+[![version npm](https://img.shields.io/npm/v/gulp-cause.svg?style=flat-square)](https://www.npmjs.com/package/gulp-cause)
+[![dependencies](https://img.shields.io/david/gulpsome/gulp-cause.svg?style=flat-square)](https://david-dm.org/gulpsome/gulp-cause)
+[![build status](https://img.shields.io/travis/gulpsome/gulp-cause.svg?style=flat-square)](http://travis-ci.org/gulpsome/gulp-cause)
+[![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat-square)](http://standardjs.com)
+
 Declarative gulp tasks composition and watching causality.
 Better with [beverage](https://github.com/gulpsome/beverage).
 
