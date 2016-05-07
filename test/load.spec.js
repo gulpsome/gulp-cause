@@ -10,7 +10,7 @@ actual value ${inspect(actual)} != \
 the expected ${inspect(expected)}`)
 }
 
-import load from '../load.js'
+import load from '../cause-load.js'
 
 describe('load', () => {
   let anObject = {'one': 1, 'two': 2}
@@ -55,5 +55,4 @@ describe('load', () => {
       expect(() => load([1, 2, 3])).to.throw(Error)
     })
   })
-
 })
