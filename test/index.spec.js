@@ -1,6 +1,6 @@
 /* global expect */
 
-import cause from '../index.js'
+import cause from '../gulp-cause.js'
 
 describe('cause', () => {
   let gulp = require('gulp')
@@ -34,5 +34,4 @@ describe('cause', () => {
       expect(gulp.tasks['task:watch']).to.exist
     })
   })
-
 })

@@ -2,7 +2,7 @@ import 'source-map-support/register'
 
 import R from 'ramda'
 import {gulpTask} from 'be-goods'
-import load from './load.js'
+import load from './cause-load.js'
 import {inspect} from 'util'
 import watch from 'gulp-watch'
 

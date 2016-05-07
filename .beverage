@@ -6,9 +6,9 @@
     "exclude": ["build:what"]
   },
   "test": {
-    "watch": ["index.js", "load.js", "test/*.spec.js"],
+    "watch": ["gulp-cause.js", "cause-load.js", "test/*.spec.js"],
     "testsRe": "test\\/.+\\.spec\\.js$"
   },
-  "causality": ["build", ["index.js", "load.js"]],
+  "causality": ["build", ["gulp-cause.js", "cause-load.js"]],
   "sourcegate": [{"recipe": "eslint", "sources": {"extends": ["standard"]}}]
 }
